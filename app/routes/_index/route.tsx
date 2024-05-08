@@ -1,7 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
-import { NavBar } from "./navbar";
-import { FadeIn } from "./fadein";
-import { Section } from "./section";
+import { NavBar } from "./components/navbar";
+import { FadeIn } from "./components/fadein";
+import { Section } from "./components/section";
+import { technologies } from "~/data";
+import { WorkExperience } from "./components/work-exp";
+import { Item } from "./components/list-item";
 
 export const meta: MetaFunction = () => {
   return [
@@ -23,7 +26,7 @@ export default function Index() {
           </div>
           <FadeIn>
             <p className="mt-12 max-w-2xl text-center text-xl text-slate-400">
-              I&apos;m a Platform Engineer from Sydney, Australia. I&apos;m
+              I&apos;m a Platform Engineer from Sydney, Australia. I am
               passionate about building and maintaining large-scale distributed
               systems in the cloud.
             </p>
@@ -54,19 +57,9 @@ export default function Index() {
               Here are some technologies that I have been working with:
             </p>
             <ul className="mt-4 grid w-2/3 grid-cols-2">
-              {[
-                "Kubernetes",
-                "AWS",
-                "Golang",
-                "Python",
-                "Typescript / Javascript",
-                "Shell (Bash + Powershell)",
-              ].map((skill) => (
+              {technologies.map((skill) => (
                 <FadeIn key={skill}>
-                  <li className="mt-1 flex font-mono">
-                    <span className="mr-2 text-teal-400">▹</span>
-                    {skill}
-                  </li>
+                  <Item text={skill} classes="font-mono" />
                 </FadeIn>
               ))}
             </ul>
@@ -75,7 +68,7 @@ export default function Index() {
 
         <FadeIn>
           <Section number={2} title="Where I've worked">
-            <p>Hello world</p>
+            <WorkExperience />
           </Section>
         </FadeIn>
       </div>

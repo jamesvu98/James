@@ -21,9 +21,20 @@ export default {
           },
           "50%": { "border-color": theme("colors.blue.500") },
         },
+        ripple: {
+          from: {
+            transform: `scale(0)`,
+            opacity: `0.45`,
+          },
+          to: {
+            transform: `scale(100)`,
+            opacity: `0`,
+          },
+        },
       }),
       animation: {
         type: "typing 1.5s steps(20) forwards, blink_cursor 1s step-end infinite",
+        ripple: "ripple 0.5s ease-out forwards",
       },
     },
   },
