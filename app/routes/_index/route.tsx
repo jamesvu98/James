@@ -2,9 +2,10 @@ import type { MetaFunction } from "@remix-run/node";
 import { NavBar } from "./components/navbar";
 import { FadeIn } from "./components/fadein";
 import { Section } from "./components/section";
-import { technologies } from "~/data";
+import { projects, technologies } from "~/data";
 import { WorkExperience } from "./components/work-exp";
 import { Item } from "./components/list-item";
+import { ProjectCard } from "./components/project-card";
 
 export const meta: MetaFunction = () => {
   return [
@@ -15,7 +16,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="mb-24 flex flex-col items-center">
+    <div className="mb-24 flex flex-col items-center scroll-smooth">
       <NavBar />
       <div className="max-w-4xl">
         <section className="flex h-screen flex-col items-center justify-center text-slate-50">
@@ -34,7 +35,7 @@ export default function Index() {
         </section>
 
         <FadeIn>
-          <Section number={1} title="About me">
+          <Section htmlId="about" number={1} title="About me">
             <p>
               Hello! My name is James and I am currently a{" "}
               <b>Platform Engineer</b> at{" "}
@@ -67,8 +68,24 @@ export default function Index() {
         </FadeIn>
 
         <FadeIn>
-          <Section number={2} title="Where I've worked">
+          <Section htmlId="experience" number={2} title="Where I've worked">
             <WorkExperience />
+          </Section>
+        </FadeIn>
+
+        <FadeIn>
+          <Section htmlId="projects" number={3} title="Some things I've built">
+            <div className="mt-4 grid grid-cols-3 place-items-stretch gap-3">
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.title}
+                  title={project.title}
+                  desc={project.desc}
+                  stack={project.stack}
+                  links={project.links}
+                />
+              ))}
+            </div>
           </Section>
         </FadeIn>
       </div>

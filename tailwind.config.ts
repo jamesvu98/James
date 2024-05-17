@@ -6,6 +6,7 @@ export default {
     extend: {
       colors: {
         navy: "#0a192f",
+        lightNavy: "#112240",
       },
       keyframes: ({ theme }) => ({
         typing: {
@@ -29,6 +30,7 @@ export default {
           to: {
             transform: `scale(100)`,
             opacity: `0`,
+            display: "none",
           },
         },
       }),

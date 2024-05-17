@@ -1,5 +1,5 @@
+import { Link } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
-
 export function NavBar() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [show, setShow] = useState(true);
@@ -31,12 +31,12 @@ export function NavBar() {
       <ul className="flex text-slate-50">
         {["Home", "About", "Experience", "Projects"].map((item, index) => (
           <li key={item} className="mx-6 font-mono">
-            <a href="https://jamesvu.com">
+            <Link to={`#${item !== "Home" ? item.toLowerCase() : ""}`}>
               <span className="text-teal-400">
-                {String(index).padStart(2, "0")}
+                {String(index).padStart(2, "0")}.{" "}
               </span>
-              . {item}
-            </a>
+              {item}
+            </Link>
           </li>
         ))}
       </ul>
