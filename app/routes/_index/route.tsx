@@ -6,6 +6,7 @@ import { projects, technologies } from "~/data";
 import { WorkExperience } from "./components/work-exp";
 import { Item } from "./components/list-item";
 import { ProjectCard } from "./components/project-card";
+import { ExternalLinks } from "./components/links";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,6 +19,7 @@ export default function Index() {
   return (
     <div className="mb-24 flex flex-col items-center scroll-smooth">
       <NavBar />
+      <ExternalLinks />
       <div className="max-w-4xl">
         <section className="flex h-screen flex-col items-center justify-center text-slate-50">
           <div>

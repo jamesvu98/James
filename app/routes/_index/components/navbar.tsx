@@ -26,7 +26,7 @@ export function NavBar() {
 
   return (
     <nav
-      className={`fixed left-0 top-0 ${show ? "" : "-translate-y-16"} flex w-full justify-end p-6 duration-150 ease-linear`}
+      className={`fixed left-0 top-0 z-10 shadow-xl shadow-black/10 backdrop-blur ${show ? "" : "-translate-y-20"} flex w-full justify-end p-6 duration-150 ease-linear`}
     >
       <ul className="flex text-slate-50">
         {["Home", "About", "Experience", "Projects"].map((item, index) => (

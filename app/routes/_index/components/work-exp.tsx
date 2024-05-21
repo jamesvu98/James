@@ -43,7 +43,7 @@ export function WorkExperience() {
         </h1>
         <p className="mt-2 font-mono text-sm">{active_exp.duration}</p>
         <FadeIn key={activeStint}>
-          <ul className="mt-5">
+          <ul className="mt-5 h-72 overflow-auto">
             {active_exp.points.map((dot_point: string, index: number) => (
               <Item key={index} text={dot_point} classes="mt-4" />
             ))}

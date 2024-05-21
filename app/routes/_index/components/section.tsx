@@ -31,7 +31,7 @@ function SectionHeading({ number, title }: { number: number; title: string }) {
         </span>
         {title}
       </h2>
-      <div className="relative top-6 mr-16 h-px flex-1 bg-slate-700"></div>
+      <span className="relative top-6 mr-16 h-px flex-1 bg-slate-700"></span>
     </div>
   );
 }
