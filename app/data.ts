@@ -1,3 +1,21 @@
+export const projects: {
+  title: string;
+  desc: string;
+  stack: string[];
+  links: { github: string; live?: string };
+}[] = [
+  {
+    title: "James Vu",
+    desc: "The website you're looking at right now :)",
+    stack: ["Typescript", "React", "Remix", "TailwindCSS"],
+    links: {
+      github: "https://github.com/jamesvu98/personal-website",
+    },
+  },
+];
+
+// ======================================================================================
+
 export const technologies = [
   "Kubernetes",
   "Golang",
@@ -6,6 +24,8 @@ export const technologies = [
   "Python",
   "Terraform",
 ];
+
+// ======================================================================================
 
 export const work_exp: Record<
   string,
@@ -33,19 +53,3 @@ export const work_exp: Record<
     link: "https://ato.gov.au",
   },
 };
-
-export const projects: {
-  title: string;
-  desc: string;
-  stack: string[];
-  links: { github: string; live?: string };
-}[] = [
-  {
-    title: "James Vu",
-    desc: "The website you're looking at right now :)",
-    stack: ["Typescript", "React", "Remix", "TailwindCSS"],
-    links: {
-      github: "https://github.com/jamesvu98/personal-website",
-    },
-  },
-];

@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
-import ExternalIcon from "~/assets/external-link";
+import ExternalIcon from "~/assets/external-link.png";
 import FolderSvg from "~/assets/folder-icon";
-import GithubIcon from "~/assets/github";
+import GithubIcon from "~/assets/github.png";
 import { projects } from "~/data";
 
 export function ProjectCard({
@@ -16,13 +16,23 @@ export function ProjectCard({
         <FolderSvg />
         <div className="flex">
           {links.github && (
-            <Link to={links.github} target="_blank" rel="noreferrer">
-              <GithubIcon />
+            <Link
+              to={links.github}
+              className="h-7 w-7 hover:hue-rotate-[-43deg]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={GithubIcon} alt={`${title} github link`} />
             </Link>
           )}
           {links.live && (
-            <Link to={links.live} target="_blank" rel="noreferrer">
-              <ExternalIcon link={links.live} />
+            <Link
+              to={links.live}
+              className="h-7 w-7 hover:hue-rotate-[-43deg]"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={ExternalIcon} alt={`${title} external link`} />
             </Link>
           )}
         </div>

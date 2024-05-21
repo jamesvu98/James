@@ -14,10 +14,7 @@ export function ExternalLinks() {
             "linkedin-external",
           ],
         ].map((link) => (
-          <li
-            key={link[2]}
-            className="h-9 w-9 hover:brightness-100 hover:hue-rotate-[-43deg]"
-          >
+          <li key={link[2]} className="h-9 w-9 hover:hue-rotate-[-43deg]">
             <Link to={link[0]} target="_blank" rel="noreferrer">
               <img src={link[1]} alt={link[2]} />
             </Link>
