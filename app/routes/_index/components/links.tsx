@@ -4,7 +4,7 @@ import LinkedInIcon from "~/assets/linkedin.png";
 
 export function ExternalLinks() {
   return (
-    <div className="fixed bottom-0 left-16 flex flex-col items-center">
+    <div className="fixed -bottom-96 left-16 flex animate-[reveal_0.75s_forwards_1s] flex-col items-center overflow-hidden">
       <ul className="flex flex-col items-center gap-4">
         {[
           ["https://github.com/jamesvu98", GithubIcon, "github-external"],

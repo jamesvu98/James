@@ -7,6 +7,7 @@ import { WorkExperience } from "./components/work-exp";
 import { Item } from "./components/list-item";
 import { ProjectCard } from "./components/project-card";
 import { ExternalLinks } from "./components/links";
+import EmailIcon from "~/assets/email.png";
 
 export const meta: MetaFunction = () => {
   return [
@@ -33,6 +34,15 @@ export default function Index() {
               passionate about building and maintaining large-scale distributed
               systems in the cloud.
             </p>
+          </FadeIn>
+          <FadeIn>
+            <a
+              href="mailto:jamesvu1998@gmail.com"
+              className="w-30 mt-10 flex items-start justify-between rounded-lg border-2 border-teal-400 px-6 py-5 text-xl font-semibold duration-200 hover:bg-teal-100/10"
+            >
+              <img className="mr-4 h-8 w-8" src={EmailIcon} alt="email icon" />
+              Say hi!
+            </a>
           </FadeIn>
         </section>
 

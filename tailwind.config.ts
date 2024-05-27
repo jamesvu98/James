@@ -13,6 +13,9 @@ export default {
           from: { width: "0" },
           to: { width: "100%" },
         },
+        reveal: {
+          to: { bottom: "0" },
+        },
         blink_cursor: {
           from: {
             "border-right": `solid ${theme("borderWidth.8")} transparent`,

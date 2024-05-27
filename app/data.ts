@@ -36,8 +36,8 @@ export const work_exp: Record<
     role: "Platform Engineer",
     points: [
       "Developed, socalised, and onboarded disaster recovery solutions and playbooks to developer teams for their infrastructure resources (S3, DynamoDB, Elasticache, Opensearch, Gitlab projects and secrets). Leveraged both AWS-native backup capabilities to improve our DR capabilities as well as custom solutions built using Typescript and Golang to address gaps existing native capabilities.",
-      "Leveraged event-based automation to create flows that allowed developers to indepedently read/write their application secrets. This removed the need for devs to share secrets to the Platform team to manually update the Vault server, uplifting the security, reliability, and efficiency of our application secrets management process.",
-      "Planned and implemented migration of existing Cloudflare firewall rules to the new Cloudflare Ruleset Engine due to deprecation of existing firewall rules. Also made improvements to our edge-engineering monorepo to unify provider versions across all modules in the repository.",
+      "Leveraged event-based automation to create flows that allowed developers to independently modify their application secrets. This removed the need for devs to share secrets to the Platform team to manually update the Vault server, uplifting the security, reliability, and efficiency of our application secrets management process.",
+      "Planned and implemented migration of existing Cloudflare firewall rules to the new Cloudflare Ruleset Engine due to deprecation of existing firewall rules. Also made improvements to our edge-engineering monorepo to simplify management of Terraform provider versions across all modules in the monorepo.",
     ],
     link: "https://zip.co",
   },
